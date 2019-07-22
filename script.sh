@@ -1,8 +1,8 @@
 localipv4=$(ifconfig | grep 'inet.*broadcast' | awk '{print $2}')
-externalipv4=$(curl -4 -s -m 5 https://ifconfig.co)
+externalipv4=$(curl -q -4 -s -m 5 https://ifconfig.co)
 
 localipv6=$(ifconfig | grep 'inet6.*%en' | awk '{print $2}')
-externalipv6=$(curl -6 -s -m 5 https://ifconfig.co)
+externalipv6=$(curl -q -6 -s -m 5 https://ifconfig.co)
 
 subtitletext='Press enter to paste or ⌘C to copy'
 
